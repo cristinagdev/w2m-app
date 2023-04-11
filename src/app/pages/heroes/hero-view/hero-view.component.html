@@ -1,0 +1,20 @@
+<p>hero-view works!</p>
+<section class="section" *ngIf="hero">
+  <h3>{{hero.name}}</h3>
+    <mat-card class="example-card" >
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>{{hero.name}}</mat-card-title>
+        <mat-card-subtitle>{{hero.gender}}</mat-card-subtitle>
+        <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      Power : {{hero.power}}
+    </mat-card-content>
+
+  </mat-card>
+
+  <button mat-button color="primary">Primary</button>
+
+</section>
