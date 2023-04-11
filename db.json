@@ -1,5 +1,13 @@
 {
   "heroes": [
-    { "id": 1, "name": "Spiderman", "superpower": "typicode" }
+    { "id": 1, "name": "Batman", "power": "strength", "gender": "male" },
+    { "id": 2, "name": "Spiderman", "power": "spider sense", "gender": "male" },
+    { "id": 3, "name": "Superman", "power": "strength", "gender": "male" },
+    { "id": 4, "name": "Wonder Woman", "power": "super strength", "gender": "female" },
+    { "id": 5, "name": "Flash", "power": "velocity", "gender": "male" },
+    { "id": 6, "name": "Scarlet Witch", "power": "telepathy", "gender": "female" },
+    { "id": 7, "name": "Ms. Marvel", "power": "polymorphy", "gender": "female" },
+    { "id": 8, "name": "Hulk", "power": "super strength", "gender": "male" }
+
   ]
 }
