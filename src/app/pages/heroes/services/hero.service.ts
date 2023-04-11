@@ -12,7 +12,7 @@ export class HeroService {
   constructor(private _httpClient: HttpClient) { }
 
   getListHeroes() : Observable<Hero[]> {
-    return this._httpClient.get<Hero[]>(`${this.API_URL}/heroes`)
+    return this._httpClient.get<Hero[]>(`${this.API_URL}/heroes?_page=1&_limit=10`)
   }
 
   getHero(id: number): Observable<Hero>{

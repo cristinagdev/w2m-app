@@ -1,0 +1,33 @@
+.section-top {
+  display: flex;
+  padding: 1rem;
+}
+.section {
+  padding: 1rem;
+  background-color: beige;
+  // display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  // gap: 1rem;
+}
+.btn-container{
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+.td-btn{
+  // background-color: aliceblue;
+  // display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.td-btn button{
+  margin: 0 1rem;
+}
+
+.mat-cell{
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: gray;
+}
