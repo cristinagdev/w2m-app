@@ -1,0 +1,28 @@
+
+<form class="form" [formGroup]="form" (ngSubmit)="submit()">
+
+  <mat-form-field >
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name">
+    <mat-error *ngIf="nameControl.touched && nameControl.invalid ">This field is required</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Gender</mat-label>
+    <mat-select formControlName="gender">
+      <mat-option value="male">Male</mat-option>
+      <mat-option value="female">Female</mat-option>
+    </mat-select>
+    <mat-error *ngIf="genderControl.touched && genderControl.invalid ">This field is required</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Power</mat-label>
+    <input formControlName="power" matInput>
+    <mat-error *ngIf="powerControl.touched && powerControl.invalid "> This field is required</mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary"> Guardar </button>
+  <button mat-stroked-button color="primary" routerLink="/heroes">Volver</button>
+</form>
+
+
+
