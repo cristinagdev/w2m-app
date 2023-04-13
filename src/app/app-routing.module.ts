@@ -12,10 +12,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/heroes/heroes.module').then((m)=> m.HeroesModule)
   },
   {
-    path:'heroes/view',
-    loadChildren: () => import('./pages/heroes/hero-view/hero-view.module').then((m)=> m.HeroViewModule)
-  },
-  {
     path: 'heroes/create',
     loadChildren: () => import('./pages/heroes/hero-create-edit/hero-create-edit.module').then((m)=> m.HeroCreateEditModule)
   }

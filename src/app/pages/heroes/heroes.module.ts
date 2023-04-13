@@ -4,20 +4,27 @@ import { CommonModule } from '@angular/common';
 import { HeroesRoutingModule } from './heroes-routing.module';
 import { HeroesComponent } from './heroes.component';
 import { MaterialModule } from 'src/app/material.module';
-import { FormsModule } from '@angular/forms';
-import { HeroViewModule } from './hero-view/hero-view.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ModalModule } from 'src/app/shared/modal/modal.module';
+import { HeroCreateEditModule } from './hero-create-edit/hero-create-edit.module';
+
+
 
 
 @NgModule({
   declarations: [
-    HeroesComponent
+    HeroesComponent,
+
   ],
   imports: [
     CommonModule,
     HeroesRoutingModule,
     MaterialModule,
     FormsModule,
-    HeroViewModule
+    ReactiveFormsModule,
+    ModalModule,
+    HeroCreateEditModule,
+    // Borrar si no se usa
   ]
 })
 export class HeroesModule { }

@@ -1,27 +1,22 @@
 .section-top {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   padding: 1rem;
 }
 .section {
   padding: 1rem;
   background-color: beige;
-  // display: grid;
-  // grid-template-columns: repeat(3, 1fr);
-  // gap: 1rem;
-}
-.btn-container{
-  padding: 1rem;
-  display: flex;
-  justify-content: space-around;
-}
-.td-btn{
-  // background-color: aliceblue;
-  // display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  height: 100vh;
 }
 
-.td-btn button{
+.table__td:hover{
+  cursor: pointer;
+  font-weight: bold;
+  background-color: aliceblue;
+}
+
+.table__td--button{
   margin: 0 1rem;
 }
 
