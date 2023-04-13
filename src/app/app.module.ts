@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MaterialModule } from './material.module';
 import { httpInterceptor } from './core/http.interceptor';
+import { SpinnerModule } from './shared/spinner/spinner.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { httpInterceptor } from './core/http.interceptor';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    SpinnerModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: httpInterceptor, multi: true}
