@@ -1,16 +1,15 @@
 <section class="section-top">
 
     <button mat-raised-button color="primary" aria-label="Example icon button with a delete icon" routerLink="/heroes/create">
-      Añadir
+      {{ "BTN_ADD" | translate}}
       <mat-icon>add</mat-icon>
     </button>
 
   <mat-form-field class="mat-field">
-    <mat-label>Buscar</mat-label>
-    <input matInput type="text" (keyup)="searchHero()" #input [formControl]="search" >
+    <mat-label>{{"INPUT_SEARCH" | translate}}</mat-label>
+    <input matInput type="text"  #input [formControl]="search" >
+
   </mat-form-field>
-
-
 </section>
 
 <section class="section">
@@ -24,13 +23,13 @@
 
     <!-- Name Column -->
     <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Hero </th>
+      <th mat-header-cell *matHeaderCellDef> {{"TABLE_HERO" | translate}} </th>
       <td class="table__td" mat-cell *matCellDef="let hero"> {{hero.name}}  </td>
     </ng-container>
 
      <!-- Power Column -->
      <ng-container matColumnDef="power">
-      <th mat-header-cell *matHeaderCellDef> Power </th>
+      <th mat-header-cell *matHeaderCellDef> {{ "TABLE_POWER" | translate}} </th>
       <td mat-cell *matCellDef="let hero"> {{hero.power}}  </td>
     </ng-container>
 
@@ -38,8 +37,8 @@
     <ng-container matColumnDef="button">
       <th mat-header-cell *matHeaderCellDef> </th>
       <td mat-cell *matCellDef="let hero">
-        <button mat-stroked-button class="table__td--button" color="primary" (click)="updateHero(hero.id)">Editar</button>
-        <button mat-stroked-button class="table__td--button" color="warn" (click)="deleteHero(hero.id)">Borrar </button>
+        <button mat-stroked-button class="table__td--button" color="primary" (click)="updateHero(hero.id)">{{ "BTN_EDIT" | translate}} </button>
+        <button mat-stroked-button class="table__td--button" color="warn" (click)="deleteHero(hero.id)">{{ "BTN_DELETE" | translate}} </button>
       </td>
     </ng-container>
 
@@ -48,7 +47,7 @@
 
     <!-- Row shown when there is no matching data. -->
     <tr class="mat-row" *matNoDataRow>
-      <td class="mat-cell table__td" colspan="4">No data matching the filter "{{input.value}}"</td>
+      <td class="mat-cell table__td" colspan="4">{{"NO_DATA" | translate}} "{{input.value}}"</td>
     </tr>
   </table>
   <mat-paginator [pageSizeOptions]="[5, 10, 20]"

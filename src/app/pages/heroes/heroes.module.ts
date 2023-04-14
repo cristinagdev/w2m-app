@@ -7,6 +7,7 @@ import { MaterialModule } from 'src/app/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalModule } from 'src/app/shared/modal/modal.module';
 import { HeroCreateEditModule } from './hero-create-edit/hero-create-edit.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 
@@ -24,7 +25,7 @@ import { HeroCreateEditModule } from './hero-create-edit/hero-create-edit.module
     ReactiveFormsModule,
     ModalModule,
     HeroCreateEditModule,
-    // Borrar si no se usa
+    TranslateModule
   ]
 })
 export class HeroesModule { }
