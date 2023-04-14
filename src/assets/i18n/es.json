@@ -1,3 +1,21 @@
 {
-  "BTN_ADD": "Añadir"
+  "BTN_ADD": "Añadir",
+  "BTN_EDIT": "Editar",
+  "BTN_DELETE": "Borrar",
+  "BTN_SAVE": "Guardar",
+  "BTN_BACK": "Volver",
+
+  "INPUT_SEARCH": "Buscar",
+  "INPUT_NAME": "Nombre",
+  "INPUT_GENDER": "Género",
+  "INPUT_POWER": "Poder",
+
+  "SPANISH": "Español",
+  "ENGLISH": "Inglés",
+
+  "TABLE_HERO": "Héroe",
+  "TABLE_POWER": "Poder",
+  "NO_DATA": "No hay datos que coincidan con el filtro"
+
+
 }

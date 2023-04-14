@@ -10,6 +10,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatChipsModule} from '@angular/material/chips';
 
 
 
@@ -30,7 +31,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatFormFieldModule,
     MatSelectModule,
     MatProgressSpinnerModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatChipsModule
   ]
 })
 export class MaterialModule { }
