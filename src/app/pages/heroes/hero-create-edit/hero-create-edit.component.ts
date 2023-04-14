@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { UppercaseDirective } from '../directives/uppercase.directive';
 import { Hero } from '../interfaces/hero.interface';
 import { HeroService } from '../services/hero.service';
 
@@ -17,9 +18,9 @@ export class HeroCreateEditComponent implements OnInit{
 
   constructor(private fb: FormBuilder, private heroService: HeroService, private activatedRoute: ActivatedRoute, private router: Router){
     this.form = this.fb.group({
-      name: ['', Validators.required],
+      name: ['',  Validators.required, ],
       gender: ['', Validators.required],
-      power: ['', Validators.required]
+      power: ['' , Validators.required]
     })
   }
 
@@ -57,7 +58,10 @@ export class HeroCreateEditComponent implements OnInit{
   }
 
   submit(){
-    console.log(this.form.value);
+    // console.log(this.form.value);
+    const nameUppercase= this.nameControl.value.toUpperCase();
+    // this.nameControl.setValue(nameUppercase)
+
     if(this.editHero){
          this.heroService.editHero(this.hero.id, this.form.value).subscribe((res) => console.log(res))
         this.router.navigate(['/heroes'])

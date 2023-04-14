@@ -1,13 +1,11 @@
-
 <form class="form" [formGroup]="form" (ngSubmit)="submit()">
-
   <mat-form-field >
-    <mat-label>Name</mat-label>
-    <input matInput formControlName="name">
-    <mat-error *ngIf="nameControl.touched && nameControl.invalid ">This field is required</mat-error>
+    <mat-label>{{"INPUT_NAME" | translate}} </mat-label>
+    <input matInput formControlName="name" uppercaseDirective type="text">
+    <mat-error *ngIf="nameControl.touched && nameControl.invalid">This field is required</mat-error>
   </mat-form-field>
   <mat-form-field appearance="fill">
-    <mat-label>Gender</mat-label>
+    <mat-label>{{"INPUT_GENDER" | translate}}</mat-label>
     <mat-select formControlName="gender">
       <mat-option value="male">Male</mat-option>
       <mat-option value="female">Female</mat-option>
@@ -15,13 +13,16 @@
     <mat-error *ngIf="genderControl.touched && genderControl.invalid ">This field is required</mat-error>
   </mat-form-field>
   <mat-form-field appearance="fill">
-    <mat-label>Power</mat-label>
-    <input formControlName="power" matInput>
+    <mat-label>{{"INPUT_POWER" | translate}}</mat-label>
+    <input formControlName="power" matInput type="text">
     <mat-error *ngIf="powerControl.touched && powerControl.invalid "> This field is required</mat-error>
   </mat-form-field>
 
-  <button mat-raised-button color="primary"> Guardar </button>
-  <button mat-stroked-button color="primary" routerLink="/heroes">Volver</button>
+  <div class="form__btn">
+    <button mat-raised-button class="form__btn--button" color="primary" [disabled]="form.invalid"> {{ "BTN_SAVE" | translate}} </button>
+    <button mat-stroked-button class="form__btn--button" color="primary" routerLink="/heroes">{{ "BTN_BACK" | translate}}</button>
+  </div>
+
 </form>
 
 
