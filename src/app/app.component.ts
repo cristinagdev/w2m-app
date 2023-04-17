@@ -21,7 +21,7 @@ export class AppComponent {
 ];
 
 
-  constructor(private translateService: TranslateService, private renderer: Renderer2){
+  constructor(private translateService: TranslateService){
 
     if(!localStorage.getItem('lang')){
       localStorage.setItem('lang', 'es');
