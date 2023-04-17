@@ -19,9 +19,7 @@ import { HeroService } from './services/hero.service';
 export class HeroesComponent implements OnInit, AfterViewInit {
 
   search: FormControl= new FormControl()
-  heroesList$ = this.heroService.heroes$
   heroesList: Hero[] = [];
-
 
   displayedColumns: string[] = [ 'name', 'power','button', ];
   dataSource: MatTableDataSource<Hero>= new MatTableDataSource(this.heroesList);
@@ -53,9 +51,6 @@ export class HeroesComponent implements OnInit, AfterViewInit {
   }
 
   getHeroesList(): void {
-    this.heroesList$= this.heroService.heroes$;
-    console.log(this.heroesList$);
-
     this.heroService.getListHeroes().subscribe((res) => {
       this.dataSource.data= res;
     });

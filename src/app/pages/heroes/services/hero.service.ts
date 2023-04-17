@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { environment } from 'src/app/environments/environment';
 import { Hero } from '../interfaces/hero.interface';
 
@@ -9,10 +9,15 @@ import { Hero } from '../interfaces/hero.interface';
 })
 export class HeroService {
   private API_URL = environment.apiUrl;
-  constructor(private _httpClient: HttpClient) { }
+
+
+  constructor(private _httpClient: HttpClient) {
+   }
+
+
 
   getListHeroes() : Observable<Hero[]> {
-    return this._httpClient.get<Hero[]>(`${this.API_URL}/heroes?_page=1&_limit=10`)
+    return this._httpClient.get<Hero[]>(`${this.API_URL}/heroes`);
   }
 
   getHero(id: number): Observable<Hero>{
@@ -31,7 +36,7 @@ export class HeroService {
     return this._httpClient.post<Hero>(`${this.API_URL}/heroes`,hero)
   }
 
-  searchHero(param: string) {
+  searchHero(param: string): Observable<Hero[]> {
     return this._httpClient.get<Hero[]>(`${this.API_URL}/heroes?name_like=${param}`)
   }
 
