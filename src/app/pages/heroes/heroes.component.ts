@@ -52,7 +52,7 @@ export class HeroesComponent implements OnInit, AfterViewInit {
     this.dataSource.paginator= this.paginator;
   }
 
-  private getHeroesList(): void {
+  getHeroesList(): void {
     this.heroesList$= this.heroService.heroes$;
     console.log(this.heroesList$);
 

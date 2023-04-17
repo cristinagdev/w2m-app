@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HeroesRoutingModule } from './heroes-routing.module';
 import { HeroesComponent } from './heroes.component';
 import { MaterialModule } from 'src/app/material.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {  ReactiveFormsModule } from '@angular/forms';
 import { ModalModule } from 'src/app/shared/modal/modal.module';
 import { HeroCreateEditModule } from './hero-create-edit/hero-create-edit.module';
 import { TranslateModule } from '@ngx-translate/core';
@@ -21,7 +21,6 @@ import { TranslateModule } from '@ngx-translate/core';
     CommonModule,
     HeroesRoutingModule,
     MaterialModule,
-    FormsModule,
     ReactiveFormsModule,
     ModalModule,
     HeroCreateEditModule,
