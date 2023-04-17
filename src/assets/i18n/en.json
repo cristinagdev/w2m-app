@@ -4,16 +4,22 @@
   "BTN_DELETE": "Delete",
   "BTN_SAVE": "Save",
   "BTN_BACK": "Back",
+  "BTN_CANCEL": "Cancel",
 
   "INPUT_SEARCH": "Search",
   "INPUT_NAME": "Name",
   "INPUT_GENDER": "Gender",
-  "INPUT_POWER": "Power",
+  "INPUT_ABILITY": "Ability",
+  "FORM_GENDER_FEM": "Female",
+  "FORM_GENDER_MALE": "Male",
 
   "SPANISH": "Spanish",
   "ENGLISH": "English",
 
   "TABLE_HERO": "Hero",
   "TABLE_POWER": "Power",
-  "NO_DATA": "No data matching the filter"
+  "NO_DATA": "No data matching the filter",
+
+  "MODAL_MESSAGE_TITLE": "A hero will be deleted",
+  "MODAL_MESSAGE_CONTENT": "Are you sure?"
 }
