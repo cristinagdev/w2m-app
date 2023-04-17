@@ -1,6 +1,6 @@
-<h2 mat-dialog-title>Un héroe va a ser borrado</h2>
-<mat-dialog-content>¿Estás seguro?</mat-dialog-content>
-<mat-dialog-actions>
-  <button mat-stroked-button mat-dialog-close>Cancelar</button>
-  <button mat-stroked-button color="warn" [mat-dialog-close]="true" >Borrar</button>
+<h2 mat-dialog-title>{{"MODAL_MESSAGE_TITLE" | translate}}</h2>
+<mat-dialog-content> {{"MODAL_MESSAGE_CONTENT" | translate}} </mat-dialog-content>
+<mat-dialog-actions class="mat-dialog-actions">
+  <button mat-stroked-button mat-dialog-close>{{"BTN_CANCEL" | translate}} </button>
+  <button mat-stroked-button color="warn" [mat-dialog-close]="true" >{{"BTN_DELETE" | translate}} </button>
 </mat-dialog-actions>
