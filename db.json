@@ -1,52 +1,46 @@
 {
   "heroes": [
     {
-      "id": 1,
-      "name": "Batman",
-      "power": "strength",
-      "gender": "male"
+      "name": "BATMAN",
+      "gender": "male",
+      "ability": "strength",
+      "id": 1
     },
     {
       "id": 2,
-      "name": "Spiderman",
-      "power": "spider sense",
+      "name": "SPIDERMAN",
+      "ability": "spider sense",
       "gender": "male"
     },
     {
       "id": 3,
-      "name": "Superman",
-      "power": "strength",
+      "name": "SUPERMAN",
+      "ability": "strength",
       "gender": "male"
     },
     {
-      "id": 4,
-      "name": "Wonder Woman",
-      "power": "super strength",
-      "gender": "female"
+      "name": "WONDER WOMAN",
+      "gender": "female",
+      "ability": "super strength",
+      "id": 4
     },
     {
-      "id": 5,
-      "name": "Flash",
-      "power": "velocity",
-      "gender": "male"
+      "name": "HULK",
+      "gender": "male",
+      "ability": "strength",
+      "id": 5
     },
     {
-      "id": 6,
-      "name": "Scarlet Witch",
-      "power": "telepathy",
-      "gender": "female"
+      "name": "SCARLET WITCH",
+      "gender": "female",
+      "ability": "telepathy",
+      "id": 6
     },
     {
-      "id": 7,
-      "name": "Ms. Marvel",
-      "power": "polymorphy",
-      "gender": "female"
-    },
-    {
-      "id": 8,
-      "name": "Hulk",
-      "power": "super strength",
-      "gender": "male"
+      "name": "Super Manolo",
+      "gender": "male",
+      "ability": "intelligence",
+      "id": 7
     }
   ]
 }
