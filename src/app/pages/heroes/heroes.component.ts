@@ -19,12 +19,11 @@ import { HeroService } from './services/hero.service';
 export class HeroesComponent implements OnInit, AfterViewInit {
 
   search: FormControl= new FormControl()
-  heroesList$!: Observable<Hero[]>;
+  heroesList$ = this.heroService.heroes$
   heroesList: Hero[] = [];
-  languageSelected: string='';
 
 
-  displayedColumns: string[] = ['position', 'name', 'power','button', ];
+  displayedColumns: string[] = [ 'name', 'power','button', ];
   dataSource: MatTableDataSource<Hero>= new MatTableDataSource(this.heroesList);
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
@@ -33,7 +32,6 @@ export class HeroesComponent implements OnInit, AfterViewInit {
     private heroService: HeroService,
     private router: Router,
     public dialog: MatDialog,
-    private spinnerService: SpinnerService
     ) {
      this.getHeroesList();
 
@@ -54,20 +52,19 @@ export class HeroesComponent implements OnInit, AfterViewInit {
     this.dataSource.paginator= this.paginator;
   }
 
-  getHeroesList() {
-    // this.heroesList$= this.heroService.heroes$;
-    // console.log(this.heroesList$);
+  private getHeroesList(): void {
+    this.heroesList$= this.heroService.heroes$;
+    console.log(this.heroesList$);
 
     this.heroService.getListHeroes().subscribe((res) => {
-      this.heroesList= res;
-      this.dataSource.data= this.heroesList;
+      this.dataSource.data= res;
     });
 
   }
 
 
 
-  deleteHero(id: number){
+  deleteHero(id: number): void{
     const dialogRef = this.dialog.open(ModalComponent)
 
     dialogRef.afterClosed().subscribe((res)=> {
@@ -76,9 +73,10 @@ export class HeroesComponent implements OnInit, AfterViewInit {
       }
       this.getHeroesList()
     })
+
   }
 
-  updateHero(id: number){
+  updateHero(id: number): void{
     this.router.navigate(['/heroes/create'], {
       queryParams: {id: id}
     })
