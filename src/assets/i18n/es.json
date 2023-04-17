@@ -1,0 +1,27 @@
+{
+  "BTN_ADD": "Añadir",
+  "BTN_EDIT": "Editar",
+  "BTN_DELETE": "Borrar",
+  "BTN_SAVE": "Guardar",
+  "BTN_BACK": "Volver",
+  "BTN_CANCEL": "Cancelar",
+
+  "INPUT_SEARCH": "Buscar",
+  "INPUT_NAME": "Nombre",
+  "INPUT_GENDER": "Género",
+  "INPUT_ABILITY": "Habilidad",
+  "FORM_GENDER_FEM": "Mujer",
+  "FORM_GENDER_MALE": "Hombre",
+
+  "SPANISH": "Español",
+  "ENGLISH": "Inglés",
+
+  "TABLE_HERO": "Héroe",
+  "TABLE_POWER": "Poder",
+  "NO_DATA": "No hay datos que coincidan con el filtro",
+
+  "MODAL_MESSAGE_TITLE": "Un héroe va a ser borrado",
+  "MODAL_MESSAGE_CONTENT": "¿Estás seguro?"
+
+
+}

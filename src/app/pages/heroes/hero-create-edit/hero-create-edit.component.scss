@@ -1,0 +1,17 @@
+.form{
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  &__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--button{
+      min-width: 50%;
+      margin: 0 1rem 0 0;
+    }
+  }
+
+}
