@@ -33,7 +33,7 @@ export class AppComponent {
     this.changeSelectedChip();
   }
 
-  changeSelectedChip(){
+  private changeSelectedChip(): void {
     this.languages.map((lang)=> {
 
       const localSt= localStorage.getItem('lang')
@@ -46,7 +46,7 @@ export class AppComponent {
   }
 
 
-  changeLanguage(lang: any){
+  changeLanguage(lang: any): void {
     if(lang.name === 'SPANISH'){
       localStorage.setItem('lang', 'es');
     }else {
