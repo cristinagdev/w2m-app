@@ -18,9 +18,9 @@ export class HeroCreateEditComponent implements OnInit{
 
   constructor(private fb: FormBuilder, private heroService: HeroService, private activatedRoute: ActivatedRoute, private router: Router){
     this.form = this.fb.group({
-      name: ['',  Validators.required, ],
+      name: ['', [ Validators.required, Validators.minLength(3)] ],
       gender: ['', Validators.required],
-      power: ['' , Validators.required]
+      ability: ['' , [Validators.required, Validators.minLength(3)]]
     })
   }
 
@@ -34,11 +34,11 @@ export class HeroCreateEditComponent implements OnInit{
         this.heroService.getHero(id).subscribe((res)=> {
           this.hero= res;
           if(this.hero){
-            const {name, gender, power }= this.hero;
+            const {name, gender, ability }= this.hero;
             this.form.setValue({
               name,
               gender,
-              power
+              ability
             })
           }
         })
@@ -53,20 +53,20 @@ export class HeroCreateEditComponent implements OnInit{
   get genderControl(): FormControl {
     return this.form.get('gender') as FormControl;
   }
-  get powerControl(): FormControl {
-    return this.form.get('power') as FormControl;
+  get abilityControl(): FormControl {
+    return this.form.get('ability') as FormControl;
   }
 
-  submit(){
-    // console.log(this.form.value);
+   submit(): void{
+
     const nameUppercase= this.nameControl.value.toUpperCase();
-    // this.nameControl.setValue(nameUppercase)
+    this.nameControl.setValue(nameUppercase)
 
     if(this.editHero){
-         this.heroService.editHero(this.hero.id, this.form.value).subscribe((res) => console.log(res))
+         this.heroService.editHero(this.hero.id, this.form.value).subscribe()
         this.router.navigate(['/heroes'])
     }else{
-      this.heroService.createHero(this.form.value).subscribe((res) => console.log(res))
+      this.heroService.createHero(this.form.value).subscribe()
       this.router.navigate(['/heroes'])
     }
 
