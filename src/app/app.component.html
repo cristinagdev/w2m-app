@@ -1,5 +1,5 @@
 <header class="header">
-  <h1>Heroes</h1>
+  <h1 routerLink="/heroes" class="header__h1">Heroes</h1>
 
   <mat-chip-listbox aria-label="Language selection">
     <mat-chip-option #chipOption color="accent" [selected]="lang.selected" *ngFor="let lang of languages"  (click)="changeLanguage(lang)" >{{lang.name | translate}}</mat-chip-option>
