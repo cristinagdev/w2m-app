@@ -21,7 +21,7 @@ export class HeroesComponent implements OnInit, AfterViewInit {
   search: FormControl= new FormControl()
   heroesList: Hero[] = [];
 
-  displayedColumns: string[] = [ 'name', 'power','button', ];
+  displayedColumns: string[] = [ 'name', 'ability','button', ];
   dataSource: MatTableDataSource<Hero>= new MatTableDataSource(this.heroesList);
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 

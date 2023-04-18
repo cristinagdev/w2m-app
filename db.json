@@ -35,12 +35,6 @@
       "gender": "female",
       "ability": "telepathy",
       "id": 6
-    },
-    {
-      "name": "Super Manolo",
-      "gender": "male",
-      "ability": "intelligence",
-      "id": 7
     }
   ]
 }
