@@ -1,31 +1,53 @@
 <form class="form" [formGroup]="form" (ngSubmit)="submit()">
-  <mat-form-field >
-    <mat-label>{{"INPUT_NAME" | translate}} </mat-label>
-    <input matInput formControlName="name" uppercaseDirective type="text">
-    <mat-error *ngIf="nameControl.hasError('required')">This field is required</mat-error>
-    <mat-error *ngIf="nameControl.hasError('minlength')">Name must have at least 3 characters</mat-error>
+  <mat-form-field>
+    <mat-label>{{ "INPUT_NAME" | translate }} </mat-label>
+    <input matInput formControlName="name" uppercaseDirective type="text" />
+    <mat-error *ngIf="nameControl.hasError('required')">{{
+      "REQUIRED_FIELD" | translate
+    }}</mat-error>
+    <mat-error *ngIf="nameControl.hasError('minlength')"
+      >{{ "REQUIRED_LENGTH" | translate }}
+    </mat-error>
   </mat-form-field>
   <mat-form-field appearance="fill">
-    <mat-label>{{"INPUT_GENDER" | translate}}</mat-label>
+    <mat-label>{{ "INPUT_GENDER" | translate }}</mat-label>
     <mat-select formControlName="gender">
-      <mat-option value="male">{{"FORM_GENDER_FEM" | translate}} </mat-option>
-      <mat-option value="female"> {{"FORM_GENDER_MALE" | translate}}</mat-option>
+      <mat-option value="male">{{ "FORM_GENDER_FEM" | translate }} </mat-option>
+      <mat-option value="female">
+        {{ "FORM_GENDER_MALE" | translate }}</mat-option
+      >
     </mat-select>
-    <mat-error *ngIf="genderControl.hasError('required') ">This field is required</mat-error>
+    <mat-error *ngIf="genderControl.hasError('required')">{{
+      "REQUIRED_FIELD" | translate
+    }}</mat-error>
   </mat-form-field>
   <mat-form-field appearance="fill">
-    <mat-label>{{"INPUT_ABILITY" | translate}}</mat-label>
-    <input formControlName="ability" matInput type="text">
-    <mat-error *ngIf="abilityControl.hasError('required') "> This field is required</mat-error>
-    <mat-error *ngIf="abilityControl.hasError('minlength')">Ability must have at least 3 characters</mat-error>
+    <mat-label>{{ "INPUT_ABILITY" | translate }}</mat-label>
+    <input formControlName="ability" matInput type="text" />
+    <mat-error *ngIf="abilityControl.hasError('required')">
+      {{ "REQUIRED_FIELD" | translate }}</mat-error
+    >
+    <mat-error *ngIf="abilityControl.hasError('minlength')">{{
+      "REQUIRED_LENGTH" | translate
+    }}</mat-error>
   </mat-form-field>
 
   <div class="form__btn">
-    <button mat-raised-button class="form__btn--button" color="primary" [disabled]="form.invalid"> {{ "BTN_SAVE" | translate}} </button>
-    <button mat-stroked-button class="form__btn--button" color="primary" routerLink="/heroes">{{ "BTN_BACK" | translate}}</button>
+    <button
+      mat-raised-button
+      class="form__btn--button"
+      color="primary"
+      [disabled]="form.invalid"
+    >
+      {{ "BTN_SAVE" | translate }}
+    </button>
+    <button
+      mat-stroked-button
+      class="form__btn--button"
+      color="primary"
+      routerLink="/heroes"
+    >
+      {{ "BTN_BACK" | translate }}
+    </button>
   </div>
-
 </form>
-
-
-

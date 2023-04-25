@@ -13,6 +13,9 @@
   "FORM_GENDER_FEM": "Female",
   "FORM_GENDER_MALE": "Male",
 
+  "REQUIRED_FIELD": "This field is required",
+  "REQUIRED_LENGTH": "This field must have at least 3 characters",
+
   "SPANISH": "Spanish",
   "ENGLISH": "English",
 
