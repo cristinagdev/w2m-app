@@ -13,6 +13,9 @@
   "FORM_GENDER_FEM": "Mujer",
   "FORM_GENDER_MALE": "Hombre",
 
+  "REQUIRED_FIELD": "Este campo es requerido",
+  "REQUIRED_LENGTH": "Este campo debe tener al menos 3 caracteres",
+
   "SPANISH": "Español",
   "ENGLISH": "Inglés",
 
@@ -22,6 +25,4 @@
 
   "MODAL_MESSAGE_TITLE": "Un héroe va a ser borrado",
   "MODAL_MESSAGE_CONTENT": "¿Estás seguro?"
-
-
 }

@@ -1,20 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ModalComponent } from './modal.component';
-import { MaterialModule } from 'src/app/material.module';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 import { TranslateModule } from '@ngx-translate/core';
 
-
-
 @NgModule({
-  declarations: [
-    ModalComponent
-  ],
-  imports: [
-    CommonModule,
-    MaterialModule,
-    TranslateModule
-  ],
-  exports:[ ModalComponent]
+  declarations: [ModalComponent],
+  imports: [CommonModule, TranslateModule, MatDialogModule, MatButtonModule],
+  exports: [ModalComponent],
 })
-export class ModalModule { }
+export class ModalModule {}
