@@ -1,12 +1,18 @@
 <header class="header">
-  <h1>Heroes</h1>
+  <h1 class="header__h1">Heroes</h1>
 
   <mat-chip-listbox aria-label="Language selection">
-    <mat-chip-option #chipOption color="accent" [selected]="lang.selected" *ngFor="let lang of languages"  (click)="changeLanguage(lang)" >{{lang.name | translate}}</mat-chip-option>
+    <mat-chip-option
+      class="header__chip-option"
+      #chipOption
+      [selected]="lang.selected"
+      *ngFor="let lang of languages"
+      (click)="changeLanguage(lang)"
+      >{{ lang.name | translate }}</mat-chip-option
+    >
   </mat-chip-listbox>
 </header>
 <main>
   <app-spinner></app-spinner>
   <router-outlet></router-outlet>
-
 </main>
