@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  angular:
+    build: ./w2m-technical-test
+    ports:
+      - 4200:80
+  server:
+    build: ./db
+    ports:
+      - 3000:3000

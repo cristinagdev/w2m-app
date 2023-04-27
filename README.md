@@ -6,11 +6,19 @@ Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-
 
 ## Arrancar la aplicación
 
-`npm install` para instalar paquetes necesarios.
+Acceder a la carpeta w2m-technical-test. Tras este paso ejecutar `npm install` para instalar paquetes necesarios.
 
-`ng serve` para arrancar la aplicación. Navegar a http://localhost:4200/.
+Ejecutar `npm run server` para levantar el backend.
 
-`json-server --watch db.json` para levantar el backend. Para poder visualizar el spinner al cargar los datos ejecutar `json-server --watch db.json --delay 500`
+Ejecutar `npm run start` para arrancar la aplicación. Navegar a http://localhost:4200/.
+
+## Arrancar la aplicación en docker
+
+En la terminal posicionarse en la carpeta raíz w2m.
+
+Ejecutar el comando `docker compose up` para levanta los dos contenedores. Una vez hecho el build navegar a http://localhost:4200/ para visualizar la aplicación.
+
+Para parar la ejecución escribir el comando `docker compose up`.
 
 ## Ejecutar los tests
 
