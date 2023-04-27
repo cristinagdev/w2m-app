@@ -1,0 +1,40 @@
+{
+  "heroes": [
+    {
+      "name": "BATMAN",
+      "gender": "male",
+      "ability": "strength",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "SPIDERMAN",
+      "ability": "spider sense",
+      "gender": "male"
+    },
+    {
+      "id": 3,
+      "name": "SUPERMAN",
+      "ability": "strength",
+      "gender": "male"
+    },
+    {
+      "name": "WONDER WOMAN",
+      "gender": "female",
+      "ability": "super strength",
+      "id": 4
+    },
+    {
+      "name": "HULK",
+      "gender": "male",
+      "ability": "strength",
+      "id": 5
+    },
+    {
+      "name": "SCARLET WITCH",
+      "gender": "female",
+      "ability": "telepathy",
+      "id": 6
+    }
+  ]
+}
