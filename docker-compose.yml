@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   angular:
-    build: ./w2m-technical-test
+    build: ./app
     ports:
       - 4200:80
   server:
