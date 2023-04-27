@@ -16,17 +16,19 @@ Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-
 
 ---
 
-Acceder a la carpeta app donde se encuentra la aplicación. Tras este paso ejecutar `npm install` para instalar paquetes necesarios.
+Acceder a la carpeta app donde se encuentra la aplicación. Tras este paso en una terminal dentro de la misma ruta ejecutar `npm install` para instalar paquetes necesarios.
 
-Ejecutar `npm run server` para levantar el backend.
+Una vez instalados ejecutar `npm run server` para levantar el backend.
 
-Ejecutar `npm run start` para arrancar la aplicación. Navegar a http://localhost:4200/.
+En otra terminal dentro de la misma ruta ejecutar`npm run start` para arrancar la aplicación.
+
+Una vez levantada la aplicación navegar a http://localhost:4200/.
 
 ## Arrancar la aplicación en docker
 
 ---
 
-En la terminal posicionarse en la carpeta raíz **w2m-app**.
+En una terminal posicionarse en la carpeta raíz **w2m-app**.
 
 Ejecutar el comando `docker compose up` para levantar el contenedor. Una vez hecho el build navegar a http://localhost:4200 para visualizar la aplicación.
 
